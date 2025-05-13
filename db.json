@@ -1,8 +1,32 @@
 {
  "personajes": [
       {
-        "id": 1,
         "nombre": "Goku",
+        "universo": "Dragon Ball",
+        "descripcion": "El Saiyajin más poderoso...",
+        "imagen": "goku.png",
+        "ataques": [
+            {
+            "nombre": "Kamehameha",
+            "daño": 25
+            },
+            {
+            "nombre": "Genki Dama",
+            "daño": 40
+            },
+            {
+            "nombre": "Golpe Instantáneo",
+            "daño": 20
+            },
+            {
+            "nombre": "Kaio-Ken x10",
+            "daño": 30
+            }
+  ]
+
+      },
+      {
+        "nombre": "Naruto",
         "universo": "Dragon Ball",
         "descripcion": "El Saiyajin más poderoso...",
         "imagen": "goku.png",
