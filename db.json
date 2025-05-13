@@ -4,7 +4,7 @@
         "nombre": "Goku",
         "universo": "Dragon Ball",
         "descripcion": "El Saiyajin más poderoso...",
-        "imagen": "goku.png",
+        "imagen": "https://media.gq.com.mx/photos/5f6ce732bc946e88f6c96320/master/pass/goky%20ultra%20instinto.jpg",
         "ataques": [
             {
             "nombre": "Kamehameha",
@@ -26,29 +26,221 @@
 
       },
       {
-        "nombre": "Naruto",
+        "nombre": "vegeta",
         "universo": "Dragon Ball",
-        "descripcion": "El Saiyajin más poderoso...",
-        "imagen": "goku.png",
+        "descripcion": "El Principe de los Saiyajin...",
+        "imagen": "https://alfabetajuega.com/hero/2022/05/Vegeta-finalmente-ha-conseguido-una-ventaja-sobre-su-rival-Kakarot.jpg?width=768&aspect_ratio=16:9&format=nowebp",
         "ataques": [
             {
-            "nombre": "Kamehameha",
+            "nombre": "Resplandor Final",
             "daño": 25
             },
             {
-            "nombre": "Genki Dama",
+            "nombre": "Galick Gun",
             "daño": 40
             },
             {
-            "nombre": "Golpe Instantáneo",
+            "nombre": "Final Shine Attack",
             "daño": 20
             },
             {
-            "nombre": "Kaio-Ken x10",
+            "nombre": "Big Bang Attack",
             "daño": 30
             }
   ]
 
+      },
+      {
+        "nombre": "Son gohan",
+        "universo": "Dragon Ball",
+        "descripcion": "Hijo mayor de Goku",
+        "imagen": "https://media.biobiochile.cl/wp-content/uploads/2022/06/nueva-transformacion-gohan.png",
+        "ataques": [
+            {
+            "nombre": "Masenko",
+            "daño": 25
+            },
+            {
+            "nombre": "Kamehameha",
+            "daño": 40
+            },
+            {
+            "nombre": "Burst Rush",
+            "daño": 20
+            },
+            {
+            "nombre": "Explosive Madan",
+            "daño": 30
+            }
+  ]
+      },
+      {
+        "nombre": "Trunks",
+        "universo": "Dragon Ball",
+        "descripcion": "Hijo mayor de vegeta",
+        "imagen": "https://static.wikia.nocookie.net/dragonball/images/c/c2/ISS_Trunks_del_Futuro_DBS.png/revision/latest?cb=20230822005116&path-prefix=es",
+        "ataques": [
+            {
+            "nombre": "Shining Sword Attack",
+            "daño": 25
+            },
+            {
+            "nombre": "Galick Gun",
+            "daño": 40
+            },
+            {
+            "nombre": "Burning Attack",
+            "daño": 20
+            },
+            {
+            "nombre": "Finish Buster",
+            "daño": 30
+            }
+  ]
+      },
+      {
+        "nombre": "Broly",
+        "universo": "Drabon ball",
+        "descripcion": "Saiyajin",
+        "imagen": "https://img.asmedia.epimg.net/resizer/v2/6QGQ22OHBFPWHGO6F7PFM5HRDI.jpg?auth=8864ddc40a1b565b747d6d4b4abb8f6bbc3e630d439186da5a34703789a92282&width=1472&height=1104&smart=true",
+        "ataques": [
+            {
+            "nombre": "Gigantic Meteor",
+            "daño": 25
+            },
+            {
+            "nombre": "Gigantic Slam",
+            "daño": 40
+            },
+            {
+            "nombre": "Eraser Cannon",
+            "daño": 20
+            },
+            {
+            "nombre": "Omega Blaster ",
+            "daño": 30
+            }
+  ]
+      },
+      {
+        "nombre": "Naruto",
+        "universo": "Naruto Shippuden",
+        "descripcion": "El mejor Hokage",
+        "imagen": "https://static.wikia.nocookie.net/naruto/images/e/e5/El_Modo_Kurama_fusionado_con_el_Modo_Sabio.png/revision/latest?cb=20170915190829&path-prefix=es",
+        "ataques": [
+            {
+            "nombre": "Jutsu de Clon de Sombra",
+            "daño": 25
+            },
+            {
+            "nombre": "Rasengan",
+            "daño": 40
+            },
+            {
+            "nombre": "Burning Attack",
+            "daño": 20
+            },
+            {
+            "nombre": "Oodama Rasengan",
+            "daño": 30
+            }
+  ]
+      },
+      {
+        "nombre": "Obito uchiha",
+        "universo": "Naruto Shippuden",
+        "descripcion": "El 10 colas",
+        "imagen": "https://static.wikia.nocookie.net/naruto/images/3/3b/Obito_Uchiha_Parte_II_Anime.png/revision/latest/scale-to-width-down/1200?cb=20160325191408&path-prefix=es",
+        "ataques": [
+            {
+            "nombre": "Mangekyō Sharingan",
+            "daño": 25
+            },
+            {
+            "nombre": "Sharingan",
+            "daño": 40
+            },
+            {
+            "nombre": "Rinnegan",
+            "daño": 20
+            },
+            {
+            "nombre": "Kamui ",
+            "daño": 30
+            }
+  ]
+      },
+      {
+        "nombre": "Itachi Uchiha",
+        "universo": "Naruto Shippuden",
+        "descripcion": "hermano de sasuke",
+        "imagen": "https://m.media-amazon.com/images/I/71SKxS1bpjL._AC_UF1000,1000_QL80_.jpg",
+        "ataques": [
+            {
+            "nombre": "Mangekyō Sharingan",
+            "daño": 25
+            },
+            {
+            "nombre": "Sharingan",
+            "daño": 40
+            },
+            {
+            "nombre": "Amaterasu",
+            "daño": 20
+            },
+            {
+            "nombre": "Susanoo",
+            "daño": 30
+            }
+  ]
+      },
+      {
+        "nombre": "sasuke uchiha",
+        "universo": "Naruto Shippuden",
+        "descripcion": "Hermano de Itachi",
+        "imagen": "https://i.ytimg.com/vi/0H180JBsUro/maxresdefault.jpg",
+        "ataques": [
+            {
+            "nombre": "Mangekyō Sharingan",
+            "daño": 25
+            },
+            {
+            "nombre": "Sharingan",
+            "daño": 40
+            },
+            {
+            "nombre": "Eternal Mangekyō Sharingan",
+            "daño": 20
+            },
+            {
+            "nombre": "Rinnegan",
+            "daño": 30
+            }
+  ]
+      },
+      {
+        "nombre": "kakashi",
+        "universo": "Naruto Shippuden",
+        "descripcion": "compañero de obito",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSul2GTxNWWq_PRMSj7iUBRgK6qa5RDindHwQ&s",
+        "ataques": [
+            {
+            "nombre": "Mangekyō Sharingan",
+            "daño": 25
+            },
+            {
+            "nombre": "Sharingan",
+            "daño": 40
+            },
+            {
+            "nombre": "Raiton",
+            "daño": 20
+            },
+            {
+            "nombre": "Chidori ",
+            "daño": 30
+            }
+  ]
       }
     ]
 }
