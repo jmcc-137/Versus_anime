@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="/js/life-bar.js"></script>
+    <script src="/js/arena.js"defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/css/arena.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arena de combate</h1>
+
+    <div id="selector-modo">
+        <button onclick="iniciarModo(1)">Modo 1: aleatorio</button>
+        <button onclick="iniciarModo(2)">Modo 2: usuario vs cpu</button>
+        <button onclick="iniciarModo(3)">Modo 3: 2 JUGADORES</button>
+
+    </div>
+
+    <section id="zona-combate" style="display:none;">
+        <div class="personaje">
+            <h3 id="nombre-jugador1">jugador 1</h3>
+            <life-bar id="vida-jugador1" name="Jugador 1" value="100"></life-bar>
+            <div id="ataques-jugador1"></div>
+        </div>
+
+        <div class="personaje">
+            <h3 id="nombre-jugador2">jugador 2</h3>
+            <life-bar id="vida-jugador2" name="Jugador 2" value="100"></life-bar>
+            <div id="ataques-jugador2"></div>
+        </div>
+
+        <h2 id="turno-info"></h2>
+    </section>
+</body>
+</html>
