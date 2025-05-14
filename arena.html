@@ -25,18 +25,24 @@
 
     <section id="zona-combate" style="display:none;">
         <div class="personaje">
-            <h3 id="nombre-jugador1">jugador 1</h3>
-            <life-bar id="vida-jugador1" name="Jugador 1" value="100"></life-bar>
-            <div id="ataques-jugador1"></div>
+          <h3 id="nombre-jugador1">Jugador 1</h3>
+          <img id="imagen-jugador1" src="" alt="Imagen Jugador 1" width="150" />
+          <button onclick="seleccionarAleatorio('jugador1')">Seleccionar Aleatorio</button>
+          <life-bar id="vida-jugador1" name="Jugador 1" value="100"></life-bar>
+          <div id="ataques-jugador1"></div>
         </div>
-
+      
         <div class="personaje">
-            <h3 id="nombre-jugador2">jugador 2</h3>
-            <life-bar id="vida-jugador2" name="Jugador 2" value="100"></life-bar>
-            <div id="ataques-jugador2"></div>
+          <h3 id="nombre-jugador2">Jugador 2</h3>
+          <img id="imagen-jugador2" src="" alt="Imagen Jugador 2" width="150" />
+          <button onclick="seleccionarAleatorio('jugador2')">Seleccionar Aleatorio</button>
+          <life-bar id="vida-jugador2" name="Jugador 2" value="100"></life-bar>
+          <div id="ataques-jugador2"></div>
         </div>
-
+      
         <h2 id="turno-info"></h2>
-    </section>
+
+        <button onclick="iniciarModo(3)">¡Iniciar combate!</button>
+      </section>
 </body>
 </html>

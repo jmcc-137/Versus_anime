@@ -1,46 +1,51 @@
-//modos  de combate
 
-const personajes = [
-    {
-      nombre: "Goku",
-      vida: 100,
-      ataques: [
-        { nombre: "Kamehameha", daño: 25 },
-        { nombre: "Genki Dama", daño: 40 },
-        { nombre: "Kaio-Ken x10", daño: 30 }
-      ]
-    },
-    {
-      nombre: "Naruto",
-      vida: 100,
-      ataques: [
-        { nombre: "Rasengan", daño: 30 },
-        { nombre: "Modo Sabio", daño: 20 },
-        { nombre: "Bijuu Bomb", daño: 35 }
-      ]
-    }
-  ];
-  let jugador1, jugador2;
+  let jugador1 =null; 
+  let jugador2 = null;
   let turno = 1;
+  let personajes = []
+  async function seleccionarAleatorio(jugadorId) { 
+    try {
+      const res = await fetch("http://localhost:3000/personajes");
+      personajes = await res.json();
+      const Aleatorio = personajes[Math.floor(Math.random() * personajes.length)]
+    if(jugadorId === "jugador1"){
+      jugador1 = Aleatorio
+      document.getElementById("nombre-jugador1").textContent = Aleatorio.nombre
+      document.getElementById("nombre-jugador1").src = Aleatorio.imagen;
+
+    } else if (jugadorId === "jugador2"){
+      jugador2 = Aleatorio
+      document.getElementById("nombre-jugador2").textContent = Aleatorio.nombre
+      document.getElementById("nombre-jugador2").src = Aleatorio.imagen;
+
+    }
+  } catch (error){
+    console.error("Error al seleccionar personaje",error)
+  }
+
+  } 
+
+   
+  
 
   function iniciarModo(modo){
     document.getElementById("zona-combate").style.display = "block";
-
+    if( !jugador1 || !jugador2 ){
+      Swal.fire("Seleccione ambos personajes antes de iniciar el combate")
+      return
+    }
     if(modo === 1){
-        jugador1 = JSON.parse(JSON.stringify(personajes[Math.floor(Math.random() * personajes.length)]))
-        jugador2 = JSON.parse(JSON.stringify(personajes[Math.floor(Math.random() * personajes.length)]))
+        
         prepararArena()
         combateAleatorio();
     }
     if(modo === 2){
-        jugador1 = personajes[0];
-        jugador2 = personajes[1]
+        
         prepararArena()
         combateVsCpu()
     }
     if(modo === 3){
-        jugador1 = personajes[0]
-        jugador2 = personajes[1]
+        
         prepararArena()
         combateDosJugadores()
     }
