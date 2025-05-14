@@ -1,0 +1,93 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Fondo general */
+body {
+  background: linear-gradient(135deg, #111, #222);
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Título */
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #00d8ff;
+}
+
+/* Contenedor principal */
+.seleccion-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Tarjetas de jugador */
+.jugador-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid #444;
+  border-radius: 16px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.jugador-card:hover {
+  transform: scale(1.03);
+}
+
+/* Imagen del personaje */
+.jugador-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Nombre y descripción */
+.jugador-card p {
+  margin: 5px 0;
+}
+
+/* Botón */
+.jugador-card button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #00d8ff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.jugador-card button:hover {
+  background-color: #00b5d6;
+}
+.botones {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.botones button {
+    background-color: #00d8ff;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.jugador-ataques{
+  list-style-type: none;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seleccionar Personajes</title>
+  <script src="js/seleccionar.js" defer></script>
+  <link rel="stylesheet" href="css/seleccionar.css">
+</head>
+<body>
+
+<header>
+  <h1>Arena Hero - Selección de Personajes</h1>
+</header>
+
+<div class="seleccion-container">
+  <div class="jugador-card" id="jugador1">
+    <img src="" alt="Jugador 1" class="jugador-img">
+    <p class="jugador-nombre">Nombre</p>
+    <p class="jugador-clave">Universo</p>
+    <p class="jugador-descripcion">Descripcion</p>
+    <ul class="jugador-ataques"></ul>
+    <button onclick="seleccionarAleatorio('jugador1')">Aleatorio</button>
+  </div>
+
+  <div class="jugador-card" id="jugador2">
+    <img src="" alt="Jugador 2" class="jugador-img">
+    <p class="jugador-nombre">Nombre</p>
+    <p class="jugador-clave">Universo</p>
+    <p class="jugador-descripcion">Descripcion</p>
+    <ul class="jugador-ataques"></ul>
+    <button onclick="seleccionarAleatorio('jugador2')">Aleatorio</button>
+  </div>
+</div>
+
+<div class="botones">
+  <button id="btn-luchar">¡Luchar!</button>
+  <button id="btn-volver">Volver</button>
+</div>
+
+
+</body>
+</html>
