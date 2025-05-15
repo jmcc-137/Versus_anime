@@ -25,26 +25,43 @@
     </div>
     <div class="modos">
 
-      <main class="modes-grid">
-        <!-- modo de jugador1 vs jugador2 -->
-      <div class="mode" onclick="selectMode('P vs P')">
-        <div class="card">P1</div>
-        <span class="vs">VS</span>
-        <div class="card">P2</div>
-      </div>
-        <!-- modo jugador vs cpu -->
-      <div class="mode" onclick="selectMode('P vs PC')">
-        <div class="card">P</div>
-        <span class="vs">VS</span>
-        <div class="card">PC</div>
-      </div>
-        <!-- modo cpu vs cpu -->
-      <div class="mode" onclick="selectMode('PC vs PC')">
-        <div class="card">PC</div>
-        <span class="vs">VS</span>
-        <div class="card">PC</div>
-      </div>
-    </main>
+<main class="modes-grid">
+  <div class="mode" onclick="selectMode('D vs P')">
+    <div class="card">
+      <img src="store/img/dragon ball/vegeta.jpeg" alt="Jugador 1" />
+      <span>P1</span>
+    </div>
+    <img src="store/img/dragon ball/vs.jpg" alt="Jugador" />
+    <div class="card">
+      <img src="store/img/goku.jpeg" alt="Jugador 2" />
+      <span>P2</span>
+    </div>
+  </div>
+
+  <div class="mode" onclick="selectMode('P vs PC')">
+    <div class="card">
+      <img src="store/img/dragon ball/freezer.jpeg" alt="Jugador" />
+      <span>P</span>
+    </div>
+    <img src="store/img/dragon ball/vs.jpg" alt="imagen del vs">
+    <div class="card">
+      <img src="store/img/dragon ball/gohan.jpeg" alt="Computadora" />
+      <span>PC</span>
+    </div>
+  </div>
+
+  <div class="mode" onclick="selectMode('PC vs PC')">
+    <div class="card">
+      <img src="store/img/goku-dragon-ball-12262.webp" alt="Computadora 1" />
+      <span>PC</span>
+    </div>
+    <img src="store/img/dragon ball/vs.jpg" alt="Jugador" />
+    <div class="card">
+      <img src="store/img/dragon ball/androide.jpeg" alt="Computadora 2" />
+      <span>PC</span>
+    </div>
+  </div>
+</main>
       
   </div>
 
