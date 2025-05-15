@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="/css/tnaruto.css">
     <title>Naruto</title>
 </head>
-<body>
-
+<body onload="document.body.classList.remove('fade-out')">
+    <nav>
+        <nav-bar></nav-bar>
+    </nav>    
     <!-- Video de fondo -->
     <video id="video-fondo" autoplay muted loop>
         <source src="/store/video/fondos/NARUTO Y SASUKE VS GOKU  quien ganará🤔 creo que la respuesta es facil😎😎.mp4" type="video/mp4">
@@ -18,9 +20,7 @@
     </video>
 
     <div class="contenido">
-        <nav>
-            <nav-bar></nav-bar>
-        </nav>
+        
 
         <h1 class="titulo">Tarjetas de Naruto</h1>
         <div class="contenedor-tarjetas">

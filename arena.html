@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/modos.css" />
     <title>Document</title>
 </head>
-<body>
+<body onload="document.body.classList.remove('fade-out')">
 
   <nav>
     <nav-bar></nav-bar>
@@ -23,30 +23,35 @@
         </iframe>
       </div>
     </div>
-    
-      <main class="modes-grid">
-          <!-- modo de jugador1 vs jugador2 -->
-        <div class="mode" onclick="selectMode('P vs P')">
-          <div class="card">P1</div>
-          <span class="vs">VS</span>
-          <div class="card">P2</div>
-        </div>
-          <!-- modo jugador vs cpu -->
-        <div class="mode" onclick="selectMode('P vs PC')">
-          <div class="card">P</div>
-          <span class="vs">VS</span>
-          <div class="card">PC</div>
-        </div>
-          <!-- modo cpu vs cpu -->
-        <div class="mode" onclick="selectMode('PC vs PC')">
-          <div class="card">PC</div>
-          <span class="vs">VS</span>
-          <div class="card">PC</div>
-        </div>
-      </main>
-        
-    </div>
+    <div class="modos">
 
+      <main class="modes-grid">
+        <!-- modo de jugador1 vs jugador2 -->
+      <div class="mode" onclick="selectMode('P vs P')">
+        <div class="card">P1</div>
+        <span class="vs">VS</span>
+        <div class="card">P2</div>
+      </div>
+        <!-- modo jugador vs cpu -->
+      <div class="mode" onclick="selectMode('P vs PC')">
+        <div class="card">P</div>
+        <span class="vs">VS</span>
+        <div class="card">PC</div>
+      </div>
+        <!-- modo cpu vs cpu -->
+      <div class="mode" onclick="selectMode('PC vs PC')">
+        <div class="card">PC</div>
+        <span class="vs">VS</span>
+        <div class="card">PC</div>
+      </div>
+    </main>
+      
+  </div>
+
+
+
+    </div>
+     
     
 </body>
 </html>

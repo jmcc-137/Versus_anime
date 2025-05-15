@@ -8,8 +8,10 @@
     <title>Tarjetas Dragon Ball</title>
     <link rel="stylesheet" href="css/tdragon.css">
 </head>
-<body>
-
+<body onload="document.body.classList.remove('fade-out')">
+    <nav>
+        <nav-bar></nav-bar>
+    </nav>    
     <!-- Video de fondo -->
     <video id="video-fondo" autoplay muted loop>
         <source src="/store/video/fondos/GOKU VS NARUTO E SASUKE - Part 3 I Fan Animation I.mp4" type="video/mp4">
@@ -17,9 +19,7 @@
     </video>
 
     <div class="contenido">
-        <nav>
-            <nav-bar></nav-bar>
-        </nav>    
+       
         <h1 class="titulo">Tarjetas de Dragon Ball</h1>
         <div class="contenedor-tarjetas">
             <div class="tarjeta">

@@ -4,11 +4,25 @@
   box-sizing: border-box;
   
 }
+body {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
 
+body.fade-out {
+  opacity: 0;
+}
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9f9f9;
   color: #333;
+  align-items: center;
+}
+
+.modos{
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
 }
 
 /* Main grid for modes */

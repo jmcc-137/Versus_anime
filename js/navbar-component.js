@@ -8,18 +8,20 @@ class NavBar extends HTMLElement{
 
         this.shadowRoot.innerHTML = `
        <style>
-        .navbar {
+       .navbar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 99%;
           display: flex;
           justify-content: space-between;
-          align-items: flex-start;
+          align-items: center;
           background: #222;
           color: white;
-          padding: 20px;
+          padding: 10px;
           font-family: sans-serif;
-          z-index:10;
+          z-index: 100; /* Asegura que esté por encima del contenido */
         }
-         
-
         .menu {
           display: flex;
           gap: 10px;
@@ -32,6 +34,7 @@ class NavBar extends HTMLElement{
           padding: 8px 12px;
           border-radius: 4px;
           transition: background 0.3s;
+          cursor: pointer;
         }
 
         .menu a:hover {
@@ -52,6 +55,11 @@ class NavBar extends HTMLElement{
           height: 50px;
           border-radius: 50%;
         }
+
+        body.fade-out {
+          opacity: 0;
+          transition: opacity 0.5s ease;
+        }
       </style>
 
       <div class="navbar">
@@ -68,6 +76,21 @@ class NavBar extends HTMLElement{
         
       </div>
         `
+    }
+
+    connectedCallback(){
+      const links = this.shadowRoot.querySelectorAll('.menu a')
+      links.forEach(link =>{
+        link.addEventListener('click', e =>{
+          e.preventDefault();
+          const targetUrl=link.getAttribute('href')
+          document.body.classList.add('fade-out')
+
+          setTimeout(() =>{
+            window.location.href = targetUrl;
+          },500);
+        })
+      })
     }
 }
 customElements.define('nav-bar', NavBar)
