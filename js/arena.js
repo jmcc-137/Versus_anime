@@ -31,7 +31,7 @@ let jugador1 = null;
       document.getElementById("nombre-jugador1").src = Aleatorio.imagen;
 
   } catch (error){
-    console.error("Error al seleccionar personaje",error)
+    console.error("Error al seleccionar personaje",error.message)
   }
 }
 
@@ -197,4 +197,20 @@ function manejarAtaqueTurnos(indice) {
     } else if (modo === "P vs P") {
       combateDosJugadores();
     }
+  }
+
+  function seleccionarPersonajeIndividual(jugadorId) {
+    seleccionarAleatorio(jugadorId).then(() => {
+      // Solo mostrar el botón de luchar si ambos personajes ya están listos
+      if (jugadorId === "jugador1") {
+        document.getElementById("btn-aleatorio-j1").style.display = "none";
+      } else {
+        document.getElementById("btn-aleatorio-j2").style.display = "none";
+      }
+  
+      // Mostrar el botón de luchar si ambos están seleccionados
+      if (jugador1 && jugador2) {
+        document.getElementById("btn-iniciar-combate").style.display = "inline-block";
+      }
+    });
   }

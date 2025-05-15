@@ -5,18 +5,14 @@
   <title>Combate</title>
   <script type="module" src="/js/life-bar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="/js/arena.js" defer></script> <!-- Aquí va tu lógica de combate -->
-  <!-- <link rel="stylesheet" href="css/combate.css"> -->
+  <script src="/js/arena.js" defer></script>
+  <link rel="stylesheet" href="/css/seleccionar.css">
 </head>
 <body>
-  <div id="zona-combate">
+  <div id="zona-combate" class="zonaCombate">
 
-    <h2 id="turno-info">Turno de: -</h2>
     
-    <div id="controles-inicio" style="text-align: center; margin-bottom: 20px;">
-      <button onclick="seleccionarAmbosPersonajes()">Seleccionar combatientes aleatorios</button>
-      <button id="btn-iniciar-combate" onclick="iniciarCombate()" style="display: none;">¡Luchar!</button>
-    </div>
+    
 
     <div class="combat-container">
 
@@ -30,9 +26,9 @@
         <ul class="jugador-ataques"></ul>
         <life-bar id="vida-jugador1"></life-bar>
         <div id="ataques-jugador1" class="ataques"></div>
-      </div>
 
-      <span class="vs">VS</span>
+        <button id="btn-aleatorio-j1" onclick="seleccionarPersonajeIndividual('jugador1')">Seleccionar aleatorio</button> 
+      </div>
 
       <!-- Jugador 2 -->
       <div class="jugador-card" id="jugador2">
@@ -44,7 +40,16 @@
         <ul class="jugador-ataques"></ul>
         <life-bar id="vida-jugador2"></life-bar>
         <div id="ataques-jugador2" class="ataques"></div>
+
+        <button id="btn-aleatorio-j2" onclick="seleccionarPersonajeIndividual('jugador2')">Seleccionar aleatorio</button> 
       </div>
+      
+
+    </div>
+    <div id="controles-inicio" style="text-align: center; margin-bottom: 20px;">
+      <button id="btn-iniciar-combate" onclick="iniciarCombate()" style="display: none;">¡Luchar!</button>
+    </div>
+    <div id="turno-info">
 
     </div>
 
