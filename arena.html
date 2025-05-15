@@ -3,46 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="/js/life-bar.js"></script>
-    <script src="/js/arena.js"defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/modos.js" defer></script>
     <script type="module" src="/js/navbar-component.js"></script>
-    <link rel="stylesheet" href="/css/arena.css">
+    <link rel="stylesheet" href="css/modos.css" />
     <title>Document</title>
 </head>
 <body>
-    <nav>
-        <nav-bar></nav-bar>
-    </nav>
-    <h1>Arena de combate</h1>
 
-    <div id="selector-modo">
-        <button onclick="iniciarModo(1)">Modo 1: aleatorio</button>
-        <button onclick="iniciarModo(2)">Modo 2: usuario vs cpu</button>
-        <button onclick="iniciarModo(3)">Modo 3: 2 JUGADORES</button>
-
+  <nav>
+    <nav-bar></nav-bar>
+  </nav>
+    <div class="video-fondo">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/-e3RdvlNbX0?autoplay=1&mute=1&controls=0&loop=1&playlist=-e3RdvlNbX0"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    
+      <main class="modes-grid">
+          <!-- modo de jugador1 vs jugador2 -->
+        <div class="mode" onclick="selectMode('P vs P')">
+          <div class="card">P1</div>
+          <span class="vs">VS</span>
+          <div class="card">P2</div>
+        </div>
+          <!-- modo jugador vs cpu -->
+        <div class="mode" onclick="selectMode('P vs PC')">
+          <div class="card">P</div>
+          <span class="vs">VS</span>
+          <div class="card">PC</div>
+        </div>
+          <!-- modo cpu vs cpu -->
+        <div class="mode" onclick="selectMode('PC vs PC')">
+          <div class="card">PC</div>
+          <span class="vs">VS</span>
+          <div class="card">PC</div>
+        </div>
+      </main>
+        
     </div>
 
-    <section id="zona-combate" style="display:none;">
-        <div class="personaje">
-          <h3 id="nombre-jugador1">Jugador 1</h3>
-          <img id="imagen-jugador1" src="" alt="Imagen Jugador 1" width="150" />
-          <button onclick="seleccionarAleatorio('jugador1')">Seleccionar Aleatorio</button>
-          <life-bar id="vida-jugador1" name="Jugador 1" value="100"></life-bar>
-          <div id="ataques-jugador1"></div>
-        </div>
-      
-        <div class="personaje">
-          <h3 id="nombre-jugador2">Jugador 2</h3>
-          <img id="imagen-jugador2" src="" alt="Imagen Jugador 2" width="150" />
-          <button onclick="seleccionarAleatorio('jugador2')">Seleccionar Aleatorio</button>
-          <life-bar id="vida-jugador2" name="Jugador 2" value="100"></life-bar>
-          <div id="ataques-jugador2"></div>
-        </div>
-      
-        <h2 id="turno-info"></h2>
-
-        <button onclick="iniciarModo(3)">¡Iniciar combate!</button>
-      </section>
+    
 </body>
 </html>

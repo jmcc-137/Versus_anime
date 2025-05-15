@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Combate</title>
+  <script type="module" src="/js/life-bar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="/js/arena.js" defer></script> <!-- Aquí va tu lógica de combate -->
+  <!-- <link rel="stylesheet" href="css/combate.css"> -->
+</head>
+<body>
+  <div id="zona-combate">
+
+    <h2 id="turno-info">Turno de: -</h2>
+    
+    <div id="controles-inicio" style="text-align: center; margin-bottom: 20px;">
+      <button onclick="seleccionarAmbosPersonajes()">Seleccionar combatientes aleatorios</button>
+      <button id="btn-iniciar-combate" onclick="iniciarCombate()" style="display: none;">¡Luchar!</button>
+    </div>
+
+    <div class="combat-container">
+
+      <!-- Jugador 1 -->
+      <div class="jugador-card" id="jugador1">
+        <h2 id="nombre-jugador1">Jugador 1</h2> <!-- Añadido para evitar error -->
+        <h3 class="jugador-nombre">Nombre</h3>
+        <img class="jugador-img" src="" alt="Imagen jugador 1">
+        <p class="juador-clave">Universo</p>
+        <p class="jugador-descripcion">Descripción</p>
+        <ul class="jugador-ataques"></ul>
+        <life-bar id="vida-jugador1"></life-bar>
+        <div id="ataques-jugador1" class="ataques"></div>
+      </div>
+
+      <span class="vs">VS</span>
+
+      <!-- Jugador 2 -->
+      <div class="jugador-card" id="jugador2">
+        <h2 id="nombre-jugador2">Jugador 2</h2> <!-- Añadido para evitar error -->
+        <h3 class="jugador-nombre">Nombre</h3>
+        <img class="jugador-img" src="" alt="Imagen jugador 2">
+        <p class="juador-clave">Universo</p>
+        <p class="jugador-descripcion">Descripción</p>
+        <ul class="jugador-ataques"></ul>
+        <life-bar id="vida-jugador2"></life-bar>
+        <div id="ataques-jugador2" class="ataques"></div>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>
