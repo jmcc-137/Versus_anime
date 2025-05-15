@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const tarjetas = document.querySelectorAll('.tarjeta');
     const personajes = [
-        { nombre: "Son Goku", info: "El Saiyan más poderoso del universo 7.", transformaciones: 10 },
-        { nombre: "Vegeta", info: "Príncipe de los Saiyans y rival de por vida de Goku.", transformaciones: 8 },
-        { nombre: "Son Gohan", info: "Hijo de Goku, padre de pan, defensor de la Tierra.", transformaciones: 7 },
-        { nombre: "Trunks", info: "Hijo de Vegeta y Bulma, viajero del tiempo.", transformaciones: 3 },
-        { nombre: "Broly", info: "Broly es un Saiyajin de clase baja con un poder descomunal que supera los límites naturales de su raza.", transformaciones: 4 },
+        { nombre: "Son Goku", info: "Es un guerrero saiyajin criado en la Tierra, conocido por su espíritu puro, su amor por la pelea y su deseo constante de superarse. Posee habilidades sobrehumanas, como fuerza extrema, velocidad, y la capacidad de transformarse en poderosos estados como el Super Saiyajin. ", transformaciones: 10 },
+        { nombre: "Vegeta", info: "príncipe de la raza saiyajin. Al principio es un enemigo de Goku, pero con el tiempo se convierte en su aliado y rival. Es orgulloso, determinado y extremadamente competitivo, con un fuerte deseo de superar a Goku. Aunque tiene un pasado como villano, evoluciona hacia un héroe dispuesto a proteger a su familia y al universo.", transformaciones: 8 },
+        { nombre: "Son Gohan", info: "A diferencia de su padre, no le apasionan las peleas, pero posee un potencial de poder enorme, especialmente cuando protege a sus seres queridos. Es inteligente, amable y equilibrado entre la vida de guerrero y la vida académica. Su transformación más icónica es cuando alcanza el nivel de Super Saiyajin 2 durante la saga de Cell.", transformaciones: 7 },
+        { nombre: "Trunks", info: "Existen dos versiones destacadas: Trunks del futuro, un joven serio y valiente que viaja en el tiempo para advertir sobre amenazas, y Trunks niño, más juguetón y travieso, amigo cercano de Goten. Es un guerrero talentoso con gran potencial, capaz de transformarse en Super Saiyajin desde joven. Combina la fuerza saiyajin con la inteligencia de su madre.", transformaciones: 3 },
+        { nombre: "Broly", info: "es un guerrero de gran fuerza innata y carácter tranquilo, pero pierde el control cuando se enfurece, desatando un poder abrumador. Criado en un ambiente hostil, tiene una historia trágica marcada por el exilio y el abuso. Su transformación en Super Saiyajin lo convierte en uno de los más fuertes del universo.", transformaciones: 4 },
     ];
 
     tarjetas.forEach((tarjeta, index) => {
