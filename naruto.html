@@ -5,56 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="/js/navbar-component.js"></script>
     <script src="js/voltea.js"></script>
-    <link rel="icon" href="https://pic.bstarstatic.com/ugc/e34df3b2f632c5a40bae099940fe7a34.jpeg">
-    <title>naruto</title>
-    <link rel="stylesheet" href="css/tnaruto.css">
+    <link rel="icon" href="https://pic.bstarstatic.com/ugc/e34df3b2f632c5a40bae099940fe7a34.jpeg ">
+    <link rel="stylesheet" href="/css/tnaruto.css">
+    <title>Naruto</title>
 </head>
 <body>
 
-    <script>
-  document.querySelectorAll('.btn-info').forEach(boton => {
-    boton.addEventListener('click', function () {
-      const tarjeta = this.closest('.tarjeta');
-      tarjeta.classList.toggle('volteada');
-    });
-  });
-</script>
+    <!-- Video de fondo -->
+    <video id="video-fondo" autoplay muted loop>
+        <source src="/store/video/fondos/NARUTO Y SASUKE VS GOKU  quien ganará🤔 creo que la respuesta es facil😎😎.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
 
+    <div class="contenido">
+        <nav>
+            <nav-bar></nav-bar>
+        </nav>
 
-    <nav>
+        <h1 class="titulo">Tarjetas de Naruto</h1>
+        <div class="contenedor-tarjetas">
+            <div class="tarjeta" data-info="¡Soy Naruto Uzumaki! El ninja más determinado de Konoha.">
+                <div class="tarjeta-contenido">
+                    <!-- Cara frontal -->
+                    <div class="tarjeta-cara tarjeta-cara-frontal">
+                        <img src="https://pic.bstarstatic.com/ugc/e34df3b2f632c5a40bae099940fe7a34.jpeg " />
+                        <h3>Naruto</h3>
+                        <button class="btn-info">Información</button>
+                    </div>
+                    <!-- Cara trasera -->
+                    <div class="tarjeta-cara tarjeta-cara-trasera">
+                        <p>¡Soy Naruto Uzumaki!</p>
+                        <p>El ninja más determinado de Konoha.</p>
+                    </div>
+                </div>
+            </div>
 
-        <nav-bar></nav-bar>
-    </nav>
+            <div class="tarjeta" data-info="¡Soy Sasuke Uchiha! El último sobreviviente del Clan Uchiha.">
+                <div class="tarjeta-contenido">
+                    <!-- Cara frontal -->
+                    <div class="tarjeta-cara tarjeta-cara-frontal">
+                        <img src="https://pbs.twimg.com/media/FgzVMNrWIAAUOPA?format=jpg&name=large " />
+                        <h3>Sasuke</h3>
+                        <button class="btn-info">Información</button>
+                    </div>
+                    <!-- Cara trasera -->
+                    <div class="tarjeta-cara tarjeta-cara-trasera">
+                        <p>¡Soy Sasuke Uchiha!</p>
+                        <p>El último sobreviviente del Clan Uchiha.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarjeta" data-info="¡Soy Itachi Uchiha! Un genio sacrificado por la paz.">
+                <div class="tarjeta-contenido">
+                    <!-- Cara frontal -->
+                    <div class="tarjeta-cara tarjeta-cara-frontal">
+                        <img src="https://i.ytimg.com/vi/-_EWqdx0L4w/maxresdefault.jpg " />
+                        <h3>Itachi</h3>
+                        <button class="btn-info">Información</button>
+                    </div>
+                    <!-- Cara trasera -->
+                    <div class="tarjeta-cara tarjeta-cara-trasera">
+                        <p>¡Soy Itachi Uchiha!</p>
+                        <p>Un genio sacrificado por la paz.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarjeta" data-info="¡Soy Kakashi Hatake! El ninja copia legendario.">
+                <div class="tarjeta-contenido">
+                    <!-- Cara frontal -->
+                    <div class="tarjeta-cara tarjeta-cara-frontal">
+                        <img src="https://preview.redd.it/what-were-fan-theories-about-kakashis-sharingan-before-his-v0-upygx3cpebub1.png?auto=webp&s=18a74a9b31b898c5cb0820d6f63573b3a6eeb727 " />
+                        <h3>Kakashi</h3>
+                        <button class="btn-info">Información</button>
+                    </div>
+                    <!-- Cara trasera -->
+                    <div class="tarjeta-cara tarjeta-cara-trasera">
+                        <p>¡Soy Kakashi Hatake!</p>
+                        <p>El ninja copia legendario.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarjeta" data-info="¡Soy Obito Uchiha! Un héroe caído convertido en villano.">
+                <div class="tarjeta-contenido">
+                    <!-- Cara frontal -->
+                    <div class="tarjeta-cara tarjeta-cara-frontal">
+                        <img src="https://i.redd.it/72spn2mg43r61.jpg " />
+                        <h3>Obito</h3>
+                        <button class="btn-info">Información</button>
+                    </div>
+                    <!-- Cara trasera -->
+                    <div class="tarjeta-cara tarjeta-cara-trasera">
+                        <p>¡Soy Obito Uchiha!</p>
+                        <p>Un héroe caído convertido en villano.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     
-
-    <h1 class="titulo">tarjetas de dragon ball</h1>
-  <div class="contenedor-tarjetas">
-    <div class="tarjeta">
-      <img src="https://pic.bstarstatic.com/ugc/e34df3b2f632c5a40bae099940fe7a34.jpeg" />
-      <h3>nNaruto</h3>
-      <button>Informacion</button>
-    </div>
-    <div class="tarjeta">
-      <img src="https://pbs.twimg.com/media/FgzVMNrWIAAUOPA?format=jpg&name=large" />
-      <h3>sasuke</h3>
-      <button>Informacion</button>
-    </div>
-    <div class="tarjeta">
-      <img src="https://i.ytimg.com/vi/-_EWqdx0L4w/maxresdefault.jpg" />
-      <h3>Itachi</h3>
-      <button>Informacion</button>
-    </div>
-    <div class="tarjeta">
-      <img src="https://preview.redd.it/what-were-fan-theories-about-kakashis-sharingan-before-his-v0-upygx3cpebub1.png?auto=webp&s=18a74a9b31b898c5cb0820d6f63573b3a6eeb727" />
-      <h3>Kakashi</h3>
-      <button>informacion</button>
-    </div>
-    <div class="tarjeta">
-      <img src="https://i.redd.it/72spn2mg43r61.jpg" />
-      <h3>Obito</h3>
-      <button>informacion</button>
-    </div>
-  </div>
 </body>
 </html>
