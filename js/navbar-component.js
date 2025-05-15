@@ -57,7 +57,7 @@ class NavBar extends HTMLElement{
       <div class="navbar">
 
       <div class="logo">
-          <img src="/store/img/logo.jpeg" alt="Logo">
+          <img src="/store/img/Home.jpeg" alt="Logo">
         </div>
         <div class="menu">
           <a href="/index.html" class="${currentPath.endsWith('index.html') || currentPath === '/' ? 'active' : ''}">Home</a>
