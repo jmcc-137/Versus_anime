@@ -1,6 +1,6 @@
 # Anime Versus App
 
-Una aplicación web interactiva donde los universos de **Dragon Ball**, **One Piece** y **Naruto Shippuden** se enfrentan en una arena de combate. El usuario podrá explorar personajes de cada universo, ver su información, y enfrentarlos en distintos modos de batalla.
+Una aplicación web interactiva donde los universos de **Dragon Ball** y **Naruto Shippuden** se enfrentan en una arena de combate. El usuario podrá explorar personajes de cada universo, ver su información, y enfrentarlos en distintos modos de batalla.
 
 ## 🛠 Tecnologías utilizadas
 
@@ -17,8 +17,7 @@ Una aplicación web interactiva donde los universos de **Dragon Ball**, **One Pi
 /
 
 ├── index.html
-├── dragonball.html         
-├── onepiece.html          
+├── dragonball.html                   
 ├── naruto.html             
 ├── arena.html              
 ├── combate.html    
@@ -26,11 +25,22 @@ Una aplicación web interactiva donde los universos de **Dragon Ball**, **One Pi
 │   ├── img/            
 │   ├── video/                              
 ├── css/
-│   └── styles.css          
+│   └── styles.css
+|   ├── modos.css
+|   ├── arena.css
+|   ├── seleccionar.css
+|   ├── tdragon.css
+|   ├── tnaruto.css              
 ├── js/
 │   ├── main.js             
 │   ├── cards.js            
-│   ├── arena.js           
+│   ├── arena.js
+|   ├── voltear.js
+|   ├── seleccion.js
+|   ├── arena.js
+|   ├── navbar-component.js
+|   ├── modos.js
+|   ├── life-bar.js                 
 ├── db.json              
 
 
@@ -41,19 +51,17 @@ Una aplicación web interactiva donde los universos de **Dragon Ball**, **One Pi
 
     Barra de navegación con enlaces a:
 
-        Home (inicio)
+        Home
 
         Dragon Ball
 
-        One Piece
+        Naruto 
 
-        Naruto Shippuden
-
-        Arena de Combate
+        Arena 
 
 2. 📖 Secciones de Personajes
 
-    Cada universo (Dragon Ball, One Piece, Naruto Shippuden) tiene su propia página.
+    Cada universo (Dragon Ball, Naruto Shippuden) tiene su propia página.
 
     En cada sección se muestran cartas de personajes obtenidas desde json-server.
 
