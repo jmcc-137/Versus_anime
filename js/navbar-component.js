@@ -8,20 +8,55 @@ class NavBar extends HTMLElement{
 
         this.shadowRoot.innerHTML = `
        <style>
+       @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
+        .bangers-regular {
+          font-family: "Bangers", system-ui;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Bangers", system-ui;
+        }
        .navbar {
           position: fixed;
           top: 0;
           left: 0;
-          width: 99%;
+          width: 100%;
           display: flex;
           justify-content: space-between;
           align-items: center;
           background: #222;
           color: white;
-          padding: 10px;
+          padding: 10px 20px;
           font-family: sans-serif;
-          z-index: 100; /* Asegura que esté por encima del contenido */
+          z-index: 1000;
         }
+        @keyframes girar {
+          from {
+            transform: rotateY(0deg);
+          }
+          to {
+            transform: rotateY(360deg);
+          }
+        }
+        .logo img {
+          height: 50px;
+          border-radius: 50%;
+          animation: girar 3s linear infinite;
+          transform-style:preserve-3d;
+          backface-visibility:hidden;
+        }
+
+        .logo img:hover {
+          transform: rotate(360deg);
+        }
+
         .menu {
           display: flex;
           gap: 10px;
@@ -46,19 +81,41 @@ class NavBar extends HTMLElement{
           color: black;
         }
 
-        .logo {
-          font-size: 1.5rem;
-          font-weight: bold;
+        .hamburger {
+          display: none;
+          flex-direction: column;
+          cursor: pointer;
+          gap: 5px;
+          margin:25px;
         }
 
-        .logo img {
-          height: 50px;
-          border-radius: 50%;
+        .hamburger div {
+          width: 30px;
+          height: 3px;
+          background-color: white;
         }
 
-        body.fade-out {
-          opacity: 0;
-          transition: opacity 0.5s ease;
+        /* Responsive */
+        @media (max-width: 768px) {
+          .menu {
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background: #222;
+            flex-direction: column;
+            width: 150px;
+            border: 1px solid #444;
+            padding: 10px;
+          }
+
+          .menu.show {
+            display: flex;
+          }
+
+          .hamburger {
+            display: flex;
+          }
         }
       </style>
 
@@ -67,6 +124,13 @@ class NavBar extends HTMLElement{
       <div class="logo">
           <img src="/store/img/Home.jpeg" alt="Logo">
         </div>
+
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
         <div class="menu">
           <a href="/index.html" class="${currentPath.endsWith('index.html') || currentPath === '/' ? 'active' : ''}">Home</a>
           <a href="/dragonball.html" class="${currentPath.includes('dragonball') ? 'active' : ''}">Dragon Ball</a>
@@ -78,19 +142,28 @@ class NavBar extends HTMLElement{
         `
     }
 
-    connectedCallback(){
-      const links = this.shadowRoot.querySelectorAll('.menu a')
-      links.forEach(link =>{
-        link.addEventListener('click', e =>{
+    connectedCallback() {
+      const links = this.shadowRoot.querySelectorAll('.menu a');
+      const hamburger = this.shadowRoot.querySelector('.hamburger');
+      const menu = this.shadowRoot.querySelector('.menu');
+  
+      // Navegación con fade
+      links.forEach(link => {
+        link.addEventListener('click', e => {
           e.preventDefault();
-          const targetUrl=link.getAttribute('href')
-          document.body.classList.add('fade-out')
-
-          setTimeout(() =>{
+          const targetUrl = link.getAttribute('href');
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
             window.location.href = targetUrl;
-          },500);
-        })
-      })
+          }, 500);
+        });
+      });
+  
+      // Hamburguesa toggle
+      hamburger.addEventListener('click', () => {
+        menu.classList.toggle('show');
+      });
     }
-}
-customElements.define('nav-bar', NavBar)
+  }
+  
+  customElements.define('nav-bar', NavBar);
