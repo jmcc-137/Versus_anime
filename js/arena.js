@@ -68,11 +68,6 @@ function iniciarModo(modo){
 }
 
 function prepararArena() {
-  // Actualizar nombres
-  document.getElementById("nombre-jugador1").textContent = jugador1.nombre;
-  document.getElementById("nombre-jugador2").textContent = jugador2.nombre;
-
-  // Resetear vida
   document.getElementById("vida-jugador1").setVida(100);
   document.getElementById("vida-jugador2").setVida(100);
 }
@@ -134,7 +129,8 @@ function manejarAtaqueTurnos(indice) {
 
     const contenedor = document.getElementById(`ataques-${idJugador}`);
     contenedor.innerHTML = ataques.map((atk, i) => `
-      <button onclick="realizarAtaque(${i})">${atk.nombre}</button>
+       <button onclick="realizarAtaque(${i})" ${turno === 1 && idJugador === "jugador2" ? 'disabled' : ''}
+            ${turno === 2 && idJugador === "jugador1" ? 'disabled' : ''}>${atk.nombre}</button>
     `).join("");
   
      document.getElementById(`ataques-${otroId}`).innerHTML = "";
@@ -156,15 +152,21 @@ function manejarAtaqueTurnos(indice) {
     return personaje.ataques[Math.floor(Math.random() * personaje.ataques.length)];
   }
   
-  function terminarCombate(ganador, intervalo = null) {
+  function terminarCombate(ganador, intervalo) {
     if (intervalo) clearInterval(intervalo);
     Swal.fire({
-      title: `¡${ganador.nombre} gana!`,
-      icon: 'success'
+      title: "¡Fin del combate!",
+      text: `${ganador.nombre} ha ganado`,
+      icon: "success",
+      confirmButtonText: "Aceptar",
     });
     // Deshabilita botones
     document.getElementById("ataques-jugador1").innerHTML = "";
     document.getElementById("ataques-jugador2").innerHTML = "";
+     const btnLuchar = document.getElementById("btn-iniciar-combate")
+     if(btnLuchar) btnLuchar.disabled= false;
+
+     document.getElementById("btn-reiniciar-combate").style.display = "inline-block";
   }
   
   function actualizarTurno() {
@@ -214,3 +216,64 @@ function manejarAtaqueTurnos(indice) {
       }
     });
   }
+  function volverAlMenu() {
+    window.location.href = "/arena.html"; // Cambia a la ruta de tu pantalla principal
+  }
+
+  document.getElementById("btn-iniciar-cambate").addEventListener("click", () =>{
+    document.getElementById('btn-iniciar-combate').disabled = true;
+
+    const modo = localStorage.getItem("modoCombate")
+
+    prepararArena();
+
+    if (modo === "PC vs PC") {
+      combateAleatorio();
+    } else if (modo === "P vs PC") {
+      combateVsCpu();
+    } else if (modo === "P vs P") {
+      combateDosJugadores();
+    }
+    
+  })
+
+  document.getElementById("btn-reiniciar-combate").addEventListener("click", () => {
+    // Resetear personajes
+  jugador1 = null;
+  jugador2 = null;
+  turno = 1;
+
+  // Limpiar tarjetas visuales
+  ["jugador1", "jugador2"].forEach(id => {
+    const card = document.getElementById(id);
+    card.querySelector(".jugador-img").src = ""; // Limpia imagen
+    card.querySelector(".jugador-nombre").textContent = "";
+    card.querySelector(".juador-clave").textContent = "";
+    card.querySelector(".jugador-descripcion").textContent = "";
+    card.querySelector(".jugador-ataques").innerHTML = "";
+  });
+
+  // Restaurar barras de vida
+  document.getElementById("vida-jugador1").setVida(100);
+  document.getElementById("vida-jugador2").setVida(100);
+
+  // Limpiar botones de ataque
+  document.getElementById("ataques-jugador1").innerHTML = "";
+  document.getElementById("ataques-jugador2").innerHTML = "";
+
+  // Ocultar zona de combate
+  document.getElementById("zona-combate").style.display = "none";
+
+  // Mostrar botón de luchar nuevamente
+  const btnLuchar = document.getElementById("btn-iniciar-combate");
+  btnLuchar.disabled = false;
+  btnLuchar.style.display = "none";
+
+  // Mostrar botones aleatorios
+  document.getElementById("btn-aleatorio-j1").style.display = "inline-block";
+  document.getElementById("btn-aleatorio-j2").style.display = "inline-block";
+
+  // Ocultar botón reiniciar si se desea
+  document.getElementById("btn-reiniciar-combate").style.display = "none";
+    
+  })

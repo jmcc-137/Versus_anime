@@ -18,9 +18,9 @@
 
       <!-- Jugador 1 -->
       <div class="jugador-card" id="jugador1">
-        <h2 id="nombre-jugador1">Jugador 1</h2> <!-- Añadido para evitar error -->
+        <h2 id="nombre-jugador2">Jugador 1</h2> <!-- Añadido para evitar error -->
         <h3 class="jugador-nombre">Nombre</h3>
-        <img class="jugador-img" src="" alt="Imagen jugador 1">
+        <img class="jugador-img" src="/store/img/Home.jpeg" alt="Imagen jugador 1">
         <p class="juador-clave">Universo</p>
         <p class="jugador-descripcion">Descripción</p>
         <ul class="jugador-ataques"></ul>
@@ -34,7 +34,7 @@
       <div class="jugador-card" id="jugador2">
         <h2 id="nombre-jugador2">Jugador 2</h2> <!-- Añadido para evitar error -->
         <h3 class="jugador-nombre">Nombre</h3>
-        <img class="jugador-img" src="" alt="Imagen jugador 2">
+        <img class="jugador-img" src="/store/img/Home.jpeg" alt="Imagen jugador 2">
         <p class="juador-clave">Universo</p>
         <p class="jugador-descripcion">Descripción</p>
         <ul class="jugador-ataques"></ul>
@@ -46,11 +46,15 @@
       
 
     </div>
-    <div id="turno-info">
+    <div id="turno-info" class="turno">
 
     </div>
     <div id="controles-inicio" style="text-align: center; margin-bottom: 20px;">
       <button id="btn-iniciar-combate" onclick="iniciarCombate()" style="display: none;">¡Luchar!</button>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="volverAlMenu()">Volver al menú</button>
+      <button id="btn-reiniciar-combate" style="display: none;">Reiniciar combate</button>
     </div>
     
 
